@@ -1,0 +1,16 @@
+.weapon-panel, .loot-section { margin-top: 18px; }
+.weapon-card {
+  width: 100%; margin-top: 10px; padding: 12px 8px;
+  border: 1px solid rgba(157,111,63,.45); background: rgba(157,111,63,.07);
+  color: #d9cfad; cursor: pointer; text-align: center;
+}
+.weapon-icon { display: grid; place-items: center; width: 48px; height: 48px; margin: 0 auto 8px; border: 1px solid #a98a5e; border-radius: 50%; font-size: 24px; }
+.weapon-card strong, .weapon-card small { display: block; }
+.weapon-card strong { font-size: 12px; margin-bottom: 5px; }
+.weapon-card small { color: #92927a; line-height: 1.5; }
+.item-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 10px; }
+.loot-item { min-width: 0; aspect-ratio: 1; border: 1px solid var(--line); background: rgba(255,255,255,.02); color: #c1b78f; cursor: pointer; }
+.loot-item span { display: block; font-size: 20px; }.loot-item small { display: block; overflow: hidden; margin-top: 4px; font-size: 8px; text-overflow: ellipsis; white-space: nowrap; }
+.combat-panel { grid-column: 1/-1; display: grid; grid-template-columns: 1fr auto; align-items: center; padding: 10px; border: 1px solid #7d2d25; background: rgba(125,45,37,.08); }
+.combat-panel .action-button { grid-column: 1/-1; margin-top: 8px; }
+.combat-panel strong { color: #ba6a58; }
