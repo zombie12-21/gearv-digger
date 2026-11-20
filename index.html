@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>九幽：四门秘录</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="game" class="game-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">JIUYOU ARCHIVE / 1937</p>
+        <h1>九幽：四门秘录</h1>
+      </div>
+      <button id="sound-toggle" class="icon-button" aria-label="切换音效">◈</button>
+    </header>
+
+    <section id="screen-select" class="screen active">
+      <div class="title-block">
+        <span class="chapter">序章 · 风起云陵</span>
+        <h2>选择你的门派传承</h2>
+        <p>古墓不会记住盗墓人的名字，只会记住他们留下的痕迹。</p>
+      </div>
+      <div id="schools" class="school-grid"></div>
+      <button id="start-button" class="primary-button" disabled>开启秘录</button>
+    </section>
+
+    <section id="screen-game" class="screen">
+      <aside class="status-panel">
+        <div class="seal"><span id="seal-glyph">金</span></div>
+        <p id="school-name" class="school-name">摸金派</p>
+        <div class="stat-list">
+          <div><span>体力</span><strong id="stat-vitality">100</strong></div>
+          <div><span>铜钱</span><strong id="stat-coins">60</strong></div>
+          <div><span>名望</span><strong id="stat-reputation">50</strong></div>
+          <div><span>业障</span><strong id="stat-karma">0</strong></div>
+        </div>
+        <button id="menu-button" class="text-button">重选门派</button>
+      </aside>
+
+      <section class="exploration">
+        <div class="room-heading">
+          <div>
+            <p id="room-index">云陵古墓 · 第一层</p>
+            <h2 id="room-name">朱雀回廊</h2>
+          </div>
+          <div class="depth"><span>墓深</span><strong id="depth-value">01</strong></div>
+        </div>
+
+        <div id="scene" class="scene" aria-live="polite">
+          <div class="fog fog-a"></div>
+          <div class="fog fog-b"></div>
+          <div class="torch torch-left"><i></i></div>
+          <div class="torch torch-right"><i></i></div>
+          <div class="gate">
+            <div class="gate-door left"></div>
+            <div class="gate-door right"></div>
+            <span id="gate-rune">玄</span>
+          </div>
+          <div id="scene-note" class="scene-note">潮湿的石砖下，传来一阵若隐若现的铜铃声。</div>
+        </div>
+
+        <div class="action-area">
+          <p id="event-text" class="event-text">前方黑暗中有一扇石门，门楣刻着未见过的符号。</p>
+          <div id="actions" class="action-list"></div>
+        </div>
+      </section>
+
+      <aside class="inventory-panel">
+        <div class="panel-heading"><span>随身物品</span><strong id="inventory-count">0/6</strong></div>
+        <div id="inventory" class="inventory"></div>
+      </aside>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
